@@ -2,6 +2,7 @@ import React from 'react';
 import Peaks from 'peaks.js';
 import './Track.css';
 import PlayButton from './PlayButton';
+import TrackName from './TrackName';
 
 export default class Track extends React.Component {
 
@@ -52,6 +53,7 @@ export default class Track extends React.Component {
     render() {
         return (
             <div className="track track--dark">
+                <TrackName name={this.props.name}></TrackName>
                 <PlayButton onTogglePlay={this.togglePlay} isPlaying={this.props.isPlaying}>Play</PlayButton>
                 <div ref={this.containerRef} className="track__waveform">Loading...</div>
                 <audio ref={this.audioRef}>
@@ -60,5 +62,5 @@ export default class Track extends React.Component {
             </div>
         )
     }
-    
+
 }
