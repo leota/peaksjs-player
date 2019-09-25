@@ -12,6 +12,7 @@ import AppHeader from './app-header/conatiners/AppHeader';
 import TrackList from './track/containers/TrackList';
 
 function App() {
+
   const tracks = [
     {
       id: 0,
@@ -39,12 +40,14 @@ function App() {
       file: testfile
     },
   ];
+
   return (
     <div>
       <AppHeader title="Peaks.js Player" logo={logo}></AppHeader>
       <TrackList tracks={tracks}></TrackList>
     </div>
   );
+
 }
 
 export default App;

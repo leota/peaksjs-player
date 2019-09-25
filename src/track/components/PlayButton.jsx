@@ -2,6 +2,7 @@ import React from 'react';
 import './PlayButton.css';
 
 export default class PlayButton extends React.Component {
+
     constructor(props) {
         super(props);
         this.togglePlay = this.togglePlay.bind(this);
@@ -18,4 +19,5 @@ export default class PlayButton extends React.Component {
             </button>
         )
     }
+
 }

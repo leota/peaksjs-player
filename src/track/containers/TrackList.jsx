@@ -12,6 +12,15 @@ export default class TrackList extends React.Component {
         this.onTrackPlay = this.onTrackPlay.bind(this);
         this.onTrackStop = this.onTrackStop.bind(this);
     }
+
+    onTrackPlay(id) {
+        this.setState({ ...this.state, currentPlayingTrack: id });
+    }
+
+    onTrackStop() {
+        this.setState({ ...this.state, currentPlayingTrack: -1 });
+    }
+
     render() {
         return (
             this.props.tracks.map((track) =>
@@ -27,10 +36,5 @@ export default class TrackList extends React.Component {
             )
         );
     }
-    onTrackPlay(id) {
-        this.setState({ ...this.state, currentPlayingTrack: id });
-    }
-    onTrackStop() {
-        this.setState({ ...this.state, currentPlayingTrack: -1 });
-    }
+
 }
