@@ -1,4 +1,5 @@
 import React from 'react';
+import './PlayButton.css';
 
 export default class PlayButton extends React.Component {
     constructor(props) {
@@ -11,6 +12,10 @@ export default class PlayButton extends React.Component {
     }
 
     render() {
-        return <button onClick={this.togglePlay}>{!this.props.isPlaying ? 'Play' : 'Pause'}</button>
+        return (
+            <button className="btn" onClick={this.togglePlay}>
+                <i className={"fa " + (this.props.isPlaying ? 'fa-pause' : 'fa-play')}></i>
+            </button>
+        )
     }
 }
