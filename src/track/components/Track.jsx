@@ -53,7 +53,7 @@ export default class Track extends React.Component {
             <div>
                 <div ref={this.containerRef} className="container">Loading...</div>
                 <audio ref={this.audioRef}>
-                    <source src="https://wavesurfer-js.org/example/split-channels/stereo.mp3" type='audio/mpeg; codecs="mp3"'></source>
+                    <source src={this.props.source} type='audio/mpeg; codecs="mp3"'></source>
                 </audio>
                 <PlayButton onTogglePlay={this.togglePlay} isPlaying={this.props.isPlaying}>Play</PlayButton>
             </div>
