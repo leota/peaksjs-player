@@ -1,11 +1,12 @@
 import React from 'react';
 import './App.css';
+import logo from './logo.svg';
 
 import AppHeader from './app-header/conatiners/AppHeader';
 
 function App() {
   return (
-    <AppHeader title="Peak.js Player"></AppHeader>
+    <AppHeader title="Peaks.js Player" logo={logo}></AppHeader>
   );
 }
 
