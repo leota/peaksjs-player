@@ -15,7 +15,7 @@ export default class PlayButton extends React.Component {
     render() {
         return (
             <button className="btn" onClick={this.togglePlay}>
-                <i className={"fa " + (this.props.isPlaying ? 'fa-pause' : 'fa-play')}></i>
+                <i className={"btn__icon fa " + (this.props.isPlaying ? 'fa-pause' : 'fa-play')}></i>
             </button>
         )
     }

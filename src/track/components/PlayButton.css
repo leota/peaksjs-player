@@ -10,6 +10,10 @@
     border-radius: 10px;
 }
 
+.btn__icon {
+    max-width: 18px;
+}
+
 .btn:hover {
     background-color: #ff8400;
 }
