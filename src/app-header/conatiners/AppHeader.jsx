@@ -5,7 +5,7 @@ import AppHeaderTitle from '../components/AppHeaderTitle';
 import AppHeaderLogo from '../components/AppHeaderLogo';
 
 
-class AppHeader extends React.Component {
+export default class AppHeader extends React.Component {
     render() {
         return <header className="header header--dark">
             <AppHeaderLogo logo={this.props.logo}></AppHeaderLogo>
@@ -13,5 +13,3 @@ class AppHeader extends React.Component {
         </header>
     }
 }
-
-export default AppHeader;
