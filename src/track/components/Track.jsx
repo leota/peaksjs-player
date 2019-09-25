@@ -35,6 +35,7 @@ export default class Track extends React.Component {
             zoomWaveformColor: 'rgba(0, 225, 128, 1)',
             overviewWaveformColor: 'rgba(0,0,0,0.2)',
             overviewHighlightRectangleColor: 'green',
+            height: 100,
         });
 
         this.peaks.zoom.setZoom(0);
@@ -50,12 +51,12 @@ export default class Track extends React.Component {
 
     render() {
         return (
-            <div>
-                <div ref={this.containerRef} className="container">Loading...</div>
+            <div className="track track--dark">
+                <PlayButton onTogglePlay={this.togglePlay} isPlaying={this.props.isPlaying}>Play</PlayButton>
+                <div ref={this.containerRef} className="track__waveform">Loading...</div>
                 <audio ref={this.audioRef}>
                     <source src={this.props.source} type='audio/mpeg; codecs="mp3"'></source>
                 </audio>
-                <PlayButton onTogglePlay={this.togglePlay} isPlaying={this.props.isPlaying}>Play</PlayButton>
             </div>
         )
     }
