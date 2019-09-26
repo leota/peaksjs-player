@@ -16,6 +16,10 @@
     background-color: #20232ade;
 }
 
+.track--invisible {
+    opacity: 0;
+}
+
 /* Peaks.js style overrides */
 .overview-container {
     height: 36px;

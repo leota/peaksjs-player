@@ -6,12 +6,15 @@ import TrackName from './TrackName';
 
 export default class Track extends React.Component {
 
+    state = {
+        isTrackReady: false
+    };
+
     constructor(props) {
         super(props);
         this.containerRef = React.createRef();
         this.audioRef = React.createRef();
         this.togglePlay = this.togglePlay.bind(this);
-
     }
 
     componentDidUpdate() {
@@ -37,7 +40,9 @@ export default class Track extends React.Component {
             overviewWaveformColor: 'rgba(0,0,0,0.2)',
             overviewHighlightRectangleColor: 'green',
             height: 100,
-        });
+        },
+            () => this.setState({ ...this.state, isTrackReady: true })
+        );
 
         this.peaks.zoom.setZoom(0);
     }
@@ -51,8 +56,9 @@ export default class Track extends React.Component {
     }
 
     render() {
+        const invisibleCssClass = !this.state.isTrackReady ? 'track--invisible' : '';
         return (
-            <div className="track track--dark">
+            <div className={`track track--dark ${invisibleCssClass}`}>
                 <TrackName name={this.props.name}></TrackName>
                 <PlayButton onTogglePlay={this.togglePlay} isPlaying={this.props.isPlaying}>Play</PlayButton>
                 <div ref={this.containerRef} className="track__waveform">Loading...</div>
