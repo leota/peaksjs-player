@@ -9,7 +9,7 @@ import * as anthem from './test_data/national-anthem.mp3';
 import * as testfile from './test_data/testfile.mp3';
 
 import AppHeader from './app-header/conatiners/AppHeader';
-import TrackList from './track/containers/TrackList';
+import TrackList from './player/containers/TrackList';
 
 function App() {
 
