@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b1b93ca79e76cbecfdb99c31aee116b4",
+    "revision": "d441a4b7d67d55a965552eece1c25afa",
     "url": "/peaksjs-player/index.html"
   },
   {
-    "revision": "1f10feff12d9265ac1da",
+    "revision": "9b50f9ddc6d6040fb060",
     "url": "/peaksjs-player/static/css/main.38d7129b.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/peaksjs-player/static/js/2.2e5ff58b.chunk.js"
   },
   {
-    "revision": "1f10feff12d9265ac1da",
-    "url": "/peaksjs-player/static/js/main.c828d7ab.chunk.js"
+    "revision": "9b50f9ddc6d6040fb060",
+    "url": "/peaksjs-player/static/js/main.70111ce7.chunk.js"
   },
   {
     "revision": "dd1d553ab4b3e0126617",
