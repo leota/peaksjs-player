@@ -1,5 +1,6 @@
 import React from 'react';
 import Track from '../components/Track';
+import './TrackList.css';
 
 export default class TrackList extends React.Component {
 
@@ -23,17 +24,21 @@ export default class TrackList extends React.Component {
 
     render() {
         return (
-            this.props.tracks.map((track) =>
-                <Track
-                    key={`track-${track.id}`}
-                    id={track.id}
-                    name={track.name}
-                    source={track.file}
-                    onPlay={this.onTrackPlay}
-                    onStop={this.onTrackStop}
-                    isPlaying={track.id === this.state.currentPlayingTrack}
-                />
-            )
+            <div className="track-list">
+                {
+                    this.props.tracks.map((track) =>
+                        <Track
+                            key={`track-${track.id}`}
+                            id={track.id}
+                            name={track.name}
+                            source={track.file}
+                            onPlay={this.onTrackPlay}
+                            onStop={this.onTrackStop}
+                            isPlaying={track.id === this.state.currentPlayingTrack}
+                        />
+                    )
+                }
+            </div>
         );
     }
 
